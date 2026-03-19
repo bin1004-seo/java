@@ -1,0 +1,13 @@
+package jump2java;
+
+public class Sample0305_2 {
+	public static void main(String[]args) {
+		String result = "";
+		result += "hello";
+		result += " ";
+		result += "jump to java";
+		System.out.println(result);
+
+	}
+
+}
