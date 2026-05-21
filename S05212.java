@@ -5,27 +5,41 @@ class Animals{
 	String name;
 	int age;
 	
-	Animals(String name) {
+	Animals(String name){
 		this.name = name;
 	}
+		
 	Animals(String name, int age){
 		this.name = name;
 		this.age = age;
-		
-	}
-	
-	public void sound() {
-		System.out.println(this.name+ "멍멍");
 	}
 	
 	void changeName(String name) {
 		this.name = name;
-		System.out.println("바뀐 이름: "+this.name);
+		System.out.println("바뀐 이름: " +this.name);
 	}
 }
 
-public class S05212 {
+class Dog extends Animals{
+	Dog(String name, int age){
+		super(name, age);
+	}
+	void sound() {
+		System.out.println("멍멍");
+	}
+}
 
+class Cat extends Animals{
+	Cat(String name, int age){
+		super(name, age);
+	}
+	void sound() {
+		System.out.println("야옹");
+	}
+}
+
+
+public class S05212 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("이름:");
@@ -34,16 +48,16 @@ public class S05212 {
 		int age = sc.nextInt();
 		sc.close();
 		
-		Animals dog = new Animals(name, age);
-		Animals cat = new Animals("태비", 11);
-		Animals dog1 = new Animals("poppy");
-		System.out.println(dog.name +" "+dog.age);
-		System.out.println(dog1.name +" "+dog1.age);
-		System.out.println(cat.name +" "+cat.age);
-		dog.sound();
-		cat.changeName("태비");
-
-	}
+		Dog dog = new Dog(name, age);
+		Cat cat = new Cat("야옹", 2);
 		
+		dog.sound();
+		cat.sound();
 
+		cat.changeName("고양이");
+	}
 }
+
+
+
+
