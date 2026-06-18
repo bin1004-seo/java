@@ -1,3 +1,5 @@
+기말고사
+
 package jump2java;
 import java.util.Scanner;
 
