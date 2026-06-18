@@ -1,3 +1,5 @@
+기말고사
+
 package jump2.java;
 
 public class DigitCount {
